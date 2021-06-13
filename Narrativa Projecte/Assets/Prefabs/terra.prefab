@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 5076001219088870312}
   - component: {fileID: 6401178335557956092}
   - component: {fileID: 5206528116763758519}
-  - component: {fileID: 6090816867093308054}
+  - component: {fileID: 4885810438494476825}
+  - component: {fileID: 8583317629723995210}
   m_Layer: 0
   m_Name: terra
   m_TagString: Untagged
@@ -80,7 +81,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &6090816867093308054
+--- !u!65 &4885810438494476825
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,3 +94,36 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8583317629723995210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3800300683271211853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75bbc3354e093614d8dd68585f6161d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slab:
+  - {fileID: 2100000, guid: e3135868e4d0f8447a94a9533090b36f, type: 2}
+  - {fileID: 2100000, guid: 46bbab63801c24a40ae8b2b5fd5286da, type: 2}
+  - {fileID: 2100000, guid: 80c7e3e2f11e1e442be36a71e54ac864, type: 2}
+  - {fileID: 2100000, guid: 0c362fdc1e44d054b8592995deed31bc, type: 2}
+  - {fileID: 2100000, guid: d8b7eec69bbdf6248b7add9cd75c0b2b, type: 2}
+  - {fileID: 2100000, guid: 333f5b312aaa8c048a3b286e3cc4dcd5, type: 2}
+  - {fileID: 2100000, guid: f53690aa2f1f41c41ab16acb732f5928, type: 2}
+  - {fileID: 2100000, guid: d7f7f5688b6573344b5ad2d6cbfd9131, type: 2}
+  - {fileID: 2100000, guid: 21f8d0f26f13b7842b1515aec4eeb857, type: 2}
+  - {fileID: 2100000, guid: e3135868e4d0f8447a94a9533090b36f, type: 2}
+  - {fileID: 2100000, guid: e3135868e4d0f8447a94a9533090b36f, type: 2}
+  - {fileID: 2100000, guid: e3135868e4d0f8447a94a9533090b36f, type: 2}
+  - {fileID: 2100000, guid: e3135868e4d0f8447a94a9533090b36f, type: 2}
+  - {fileID: 2100000, guid: 80c7e3e2f11e1e442be36a71e54ac864, type: 2}
+  - {fileID: 2100000, guid: 46bbab63801c24a40ae8b2b5fd5286da, type: 2}
+  - {fileID: 2100000, guid: 46bbab63801c24a40ae8b2b5fd5286da, type: 2}
+  - {fileID: 2100000, guid: 46bbab63801c24a40ae8b2b5fd5286da, type: 2}
+  - {fileID: 2100000, guid: 46bbab63801c24a40ae8b2b5fd5286da, type: 2}
+  - {fileID: 2100000, guid: 46bbab63801c24a40ae8b2b5fd5286da, type: 2}
+  - {fileID: 2100000, guid: 46bbab63801c24a40ae8b2b5fd5286da, type: 2}
