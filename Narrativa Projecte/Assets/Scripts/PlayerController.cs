@@ -24,6 +24,11 @@ namespace Narrativa
         public static bool top;
         public int hp;
         public static bool canHit = true;
+        public Animator anim;
+        public SpriteRenderer [] mySpriteRender = new SpriteRenderer[0];
+        public bool rotadoA = false;
+        public bool rotadoD = false;
+        public bool primerclick = false;
         // Update is called once per frame
         void Update()
         {
@@ -47,22 +52,70 @@ namespace Narrativa
                 }
 
             }
-                if (pos.x == 1)
+
+            
+                if (Input.GetKey(KeyCode.D))
                 {
-                    right = true;
-                }
-                else if (pos.x == -1)
+                    anim.SetBool("Change", true);
+                anim.SetBool("ChangeInvert", false);
+                right = true;
+                rotadoA = false;
+
+                if(rotadoD == false && primerclick == false)
                 {
-                    left = true;
-                }
-                else if (pos.y == 1)
+                    rotadoD = true;
+                    primerclick = true;
+                    }
+                else if (rotadoD == false && primerclick == true)
                 {
-                    top = true;
+                    transform.Rotate(new Vector3(0, -180, 0));
+                    rotadoD = true;
+                    primerclick = true;
                 }
-                else if (pos.y == -1)
+            }
+
+            else if (Input.GetKey(KeyCode.A))
                 {
-                    down = true;
+                anim.SetBool("Change", false);
+                anim.SetBool("ChangeInvert", true);
+                   left = true;
+                rotadoD = false;
+
+                if(rotadoA == false && primerclick == false)
+                {
+                    transform.Rotate(new Vector3(0, 180, 0));
+                    rotadoA = true;
+                    primerclick = true;
+
+                } else if (rotadoA == false && primerclick == true)
+                {
+                    transform.Rotate(new Vector3(0, -180, 0));
+                    rotadoA = true;
+                    primerclick = true;
                 }
+                
+            }
+                else if (Input.GetKey(KeyCode.W))
+                {
+                    anim.SetBool("Change", true);
+                anim.SetBool("ChangeInvert", false);
+                top = true;
+                primerclick = true;
+            }
+                else if (Input.GetKey(KeyCode.S))
+                {
+                anim.SetBool("Change", false);
+                anim.SetBool("ChangeInvert", true);
+                down = true;
+                primerclick = true;
+
+            }
+                else if (pos.x == 0 && pos.y == 0)
+                {
+                anim.SetBool("Change", false);
+                anim.SetBool("ChangeInvert", false);
+                transform.Rotate(new Vector3(0, 0, 0));
+            }
             if (Input.GetKeyUp(KeyCode.Space))
             {
                 moveSpeed = 5f;
