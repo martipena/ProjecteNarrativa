@@ -133,3 +133,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 3
   hit: 0
+  textDamage: {fileID: 449016985146178756, guid: f77a0b42557b59b4a948932ac3ed8a0b,
+    type: 3}

@@ -7,10 +7,11 @@ namespace Narrativa
     public class Attack : MonoBehaviour
     {
         public float speed=30;
-        public int attackValue=1;
+        public int attackValue;
         // Start is called before the first frame update
         void Start()
         {
+            attackValue = PlayerController.attackValue;
             StartCoroutine(time());
         }
 
@@ -37,7 +38,6 @@ namespace Narrativa
         {
             if (collision.CompareTag("enemy"))
             {
-               Debug.Log(collision.gameObject.name+" | "+collision.GetComponent<Enemy>().hp);
                collision.GetComponent<Enemy>().getHit(attackValue);
                StopCoroutine(time());
                Destroy(this.gameObject);

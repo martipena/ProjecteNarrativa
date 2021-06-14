@@ -2,18 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class slabTexture : MonoBehaviour
+namespace Narrativa
 {
-
-    public Material[] slab = new Material[1];
-    Renderer rend;
-
-
-    void Start()
+    public class slabTexture : MonoBehaviour
     {
-        rend = GetComponent<Renderer>();
-        int rand = Random.Range(0, slab.Length);
-        rend.material = slab[rand];
+
+        public Material[] slab = new Material[1];
+        Renderer rend;
+
+
+        void Start()
+        {
+            rend = GetComponent<Renderer>();
+            int rand = Random.Range(0, slab.Length);
+            rend.material = slab[rand];
+        }
+
     }
 
 }

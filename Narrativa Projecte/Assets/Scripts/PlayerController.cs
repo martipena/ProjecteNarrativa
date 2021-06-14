@@ -29,6 +29,7 @@ namespace Narrativa
         public bool rotadoA = false;
         public bool rotadoD = false;
         public bool primerclick = false;
+        public static int attackValue=1;
         // Update is called once per frame
         void Update()
         {
@@ -197,8 +198,23 @@ namespace Narrativa
 
         IEnumerator nextHit(float time)//Determina el temps que falta per poder tornar a atacar. Es pot modificar amb la variable time
         {
+            StartCoroutine(hitTime());
+            
             yield return new WaitForSeconds(time);
             canHit = true;
+        }
+
+        IEnumerator hitTime()//Determina el temps que falta per poder tornar a atacar. Es pot modificar amb la variable time
+        {
+            for (int i = 0; i < mySpriteRender.Length; i++)
+            {
+                mySpriteRender[i].GetComponent<SpriteRenderer>().gameObject.SetActive(false);
+            }
+            yield return new WaitForSeconds(0.2f);
+            for (int i = 0; i < mySpriteRender.Length; i++)
+            {
+                mySpriteRender[i].GetComponent<SpriteRenderer>().gameObject.SetActive(true);
+            }
         }
 
     }

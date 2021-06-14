@@ -8,6 +8,7 @@ TagManager:
   - nextScene
   - attack
   - enemy
+  - wall
   layers:
   - Default
   - TransparentFX
