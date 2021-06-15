@@ -16,6 +16,7 @@ namespace Narrativa
         public bool canWalk = true;
         public float attackTime;
         public GameObject areaAttack;
+        public bool salero;
         // Start is called before the first frame update
         void Start()
         {
@@ -72,7 +73,15 @@ namespace Narrativa
 
         public void Attack()
         {
-            gameObject.GetComponentInChildren<Animator>().Play("SaleroAttack");
+            if (salero)
+            {
+                gameObject.GetComponentInChildren<Animator>().Play("SaleroAttack");
+            }
+            else
+            {
+                gameObject.GetComponentInChildren<Animator>().Play("CuchilloAttack");
+            }
+            
             StartCoroutine(enemyAttack(attackTime));
         }
 

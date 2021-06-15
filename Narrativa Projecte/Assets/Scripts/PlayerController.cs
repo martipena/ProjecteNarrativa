@@ -12,6 +12,8 @@ namespace Narrativa
         private Vector2 moveDirection;
         public LevelGeneration levelGen;
         public Image loadImage;
+        public Text loadText;
+        public GameObject UI;
         public bool potIniciar=false;
         public bool test = false;
         public bool canShoot = true;
@@ -30,9 +32,18 @@ namespace Narrativa
         public bool rotadoD = false;
         public bool primerclick = false;
         public static int attackValue=1;
+        public Text hpUi;
+        void Start()
+        {
+            for (int i = 0; i < mySpriteRender.Length; i++)
+            {
+                mySpriteRender[i].GetComponent<SpriteRenderer>().gameObject.SetActive(false);
+            }
+        }
         // Update is called once per frame
         void Update()
         {
+            hpUi.text = hp.ToString();
             if (test == true){//Inici joc en zona de test
                 ProcessInputs();
             }
@@ -45,10 +56,14 @@ namespace Narrativa
                 else
                 {
                     loadImage.enabled = true;
+                    loadText.enabled = true;
+                    UI.SetActive(false);
                 }
                 if (potIniciar)
                 {
                     loadImage.enabled = false;
+                    loadText.enabled = false;
+                    UI.SetActive(true);
                     ProcessInputs();
                 }
 
@@ -186,7 +201,13 @@ namespace Narrativa
 
         IEnumerator inicia()
         {
+            
             yield return new WaitForSeconds(1.5f);
+            
+            for (int i = 0; i < mySpriteRender.Length; i++)
+            {
+                mySpriteRender[i].GetComponent<SpriteRenderer>().gameObject.SetActive(true);
+            }
             potIniciar = true;
         }
 
