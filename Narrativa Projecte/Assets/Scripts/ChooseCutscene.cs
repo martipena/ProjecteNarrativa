@@ -32,8 +32,8 @@ namespace Narrativa
             if (GameData.nivell=="Nivell1")//Mostra la introduccio
             {
                 Intro.gameObject.SetActive(true);
-                StartCoroutine(cutsceneDuration(2));
-            }else if (GameData.nivell == "Nivell2" || GameData.nivell == "Nivell3" || GameData.nivell == "Nivell4")//Mostra les escenes aleatories
+                StartCoroutine(cutsceneDuration(5));
+            }else if (GameData.nivell == "Nivell2" || GameData.nivell == "Nivell3")//Mostra les escenes aleatories
             {
                 while (surt!=true)
                 {
@@ -44,7 +44,7 @@ namespace Narrativa
                         GameData.notAvailableScenes.Add(scenes[rand].name);
                         scenes[rand] = null;
                         surt = true;
-                        StartCoroutine(cutsceneDuration(2));
+                        StartCoroutine(cutsceneDuration(5));
                     }
                     else
                     {
@@ -55,10 +55,10 @@ namespace Narrativa
                         surt = true;
                     }
                 }
-            }else if(GameData.nivell == "Nivell5")
+            }else if(GameData.nivell == "Nivell4")
             {
                 Ending.gameObject.SetActive(true);
-                StartCoroutine(endGame(2));
+                StartCoroutine(endGame(10));
             }
         }
 

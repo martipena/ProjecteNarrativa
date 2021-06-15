@@ -10,6 +10,9 @@ TagManager:
   - enemy
   - wall
   - minimap
+  - heal
+  - attackUp
+  - speedUpAttack
   layers:
   - Default
   - TransparentFX

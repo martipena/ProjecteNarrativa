@@ -358,6 +358,10 @@ MonoBehaviour:
   attackTime: 1
   areaAttack: {fileID: 2371503538231347101}
   salero: 0
+  drops:
+  - {fileID: 2704564965118925098, guid: 3ad400bcc663ede47a9a1cbfee78862a, type: 3}
+  - {fileID: 5551536352148353194, guid: dee6989fda4352d44bad060b46f81074, type: 3}
+  - {fileID: 1300434140344521706, guid: f5fa2f00e9209d943800729b0f55f81d, type: 3}
 --- !u!70 &2371503538559937274
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

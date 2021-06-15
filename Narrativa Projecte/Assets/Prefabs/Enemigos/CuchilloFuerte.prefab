@@ -52,7 +52,7 @@ MonoBehaviour:
   textDamage: {fileID: 449016985146178756, guid: f77a0b42557b59b4a948932ac3ed8a0b,
     type: 3}
   randNum: 0
-  speed: 2
+  speed: 1
   wall: 0
   coroutine: 0
   canCoroutine: 1
@@ -60,6 +60,10 @@ MonoBehaviour:
   attackTime: 0.3
   areaAttack: {fileID: 479906352717654209}
   salero: 0
+  drops:
+  - {fileID: 5551536352148353194, guid: dee6989fda4352d44bad060b46f81074, type: 3}
+  - {fileID: 2704564965118925098, guid: 3ad400bcc663ede47a9a1cbfee78862a, type: 3}
+  - {fileID: 1300434140344521706, guid: f5fa2f00e9209d943800729b0f55f81d, type: 3}
 --- !u!70 &479906350778713510
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

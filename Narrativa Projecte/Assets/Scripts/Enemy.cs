@@ -17,6 +17,8 @@ namespace Narrativa
         public float attackTime;
         public GameObject areaAttack;
         public bool salero;
+        public GameObject[] drops = new GameObject[0];
+        public bool disapear = false;
         // Start is called before the first frame update
         void Start()
         {
@@ -30,10 +32,15 @@ namespace Narrativa
             {
                 Walk();
             }
-            
-            if (hp <= 0)
+
+            if (hp <= 0 && disapear == false)
             {
-                this.gameObject.SetActive(false);
+               
+                int random = Random.Range(0, drops.Length);
+                Instantiate(drops[random], transform.position, Quaternion.identity);
+                
+                gameObject.SetActive(false);
+                disapear = true;
             }
         }
         public void getHit(int value)

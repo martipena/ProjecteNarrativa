@@ -207,6 +207,62 @@ namespace Narrativa
             StartCoroutine(nextHit(1f));
         }
 
+        public void Heal()
+        {
+            if (hp < 10)
+            {
+                hp += 1;
+            }
+            else
+            {
+
+            }
+            
+        }
+        public void increaseAttack()
+        {
+            if (attackValue < 4)
+            {
+                attackValue += 1;
+            }
+            else
+            {
+
+            }
+        }
+
+        public void increaseAttackSpeed()
+        {
+            if (time > 0.2)
+            {
+                time -= 0.1f;
+            }
+            else
+            {
+
+            }
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.gameObject.tag == "heal")
+            {
+                collision.gameObject.SetActive(false);
+                Heal();
+            }
+            if (collision.gameObject.tag == "attackUp")
+            {
+                collision.gameObject.SetActive(false);
+                increaseAttack();
+            }
+            if (collision.gameObject.tag == "speedUpAttack")
+            {
+                collision.gameObject.SetActive(false);
+                Debug.Log("tocat");
+                increaseAttackSpeed();
+            }
+        }
+
         IEnumerator inicia()
         {
             

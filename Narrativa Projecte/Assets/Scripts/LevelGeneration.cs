@@ -72,6 +72,23 @@ namespace Narrativa
         public GameObject player;
         private void Start()
         {
+            if (GameData.nivell == "Nivell1")
+            {
+                nivell1 = true;
+                nivell2 = false;
+                nivell3 = false;
+            }else if (GameData.nivell == "Nivell2")
+            {
+                nivell1 = false;
+                nivell2 = true;
+                nivell3 = false;
+            }
+            else if (GameData.nivell == "Nivell3")
+            {
+                nivell1 = false;
+                nivell2 = false;
+                nivell3 = true;
+            }
             if (nivell1 == true || nivell2 == true)
             {
                 maxX = 25;
