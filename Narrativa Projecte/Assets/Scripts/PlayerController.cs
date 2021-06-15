@@ -43,6 +43,14 @@ namespace Narrativa
         // Update is called once per frame
         void Update()
         {
+            if (Input.GetKeyDown(KeyCode.Escape) && Time.timeScale == 1)//pausa
+            {
+                Time.timeScale = 0;
+            }
+            else if (Input.GetKeyDown(KeyCode.Escape) && Time.timeScale == 0)
+            {
+                Time.timeScale = 1;
+            }
             hpUi.text = hp.ToString();
             if (test == true){//Inici joc en zona de test
                 ProcessInputs();
